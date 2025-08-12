@@ -16,19 +16,19 @@ class MicroFaceDetectorTF(Model):
         super(MicroFaceDetectorTF, self).__init__()
         
         # Ultra-lightweight architecture with <5k parameters
-        self.conv1 = layers.Conv2D(8, 3, padding='same', activation='relu', name='conv1')
+        self.conv1 = layers.Conv2D(4, 3, padding='same', activation='relu', name='conv1')
         self.bn1 = layers.BatchNormalization(name='bn1')
         self.pool1 = layers.MaxPooling2D(2, 2, name='pool1')
         
-        self.conv2 = layers.Conv2D(16, 3, padding='same', activation='relu', name='conv2')
+        self.conv2 = layers.Conv2D(8, 3, padding='same', activation='relu', name='conv2')
         self.bn2 = layers.BatchNormalization(name='bn2')
         self.pool2 = layers.MaxPooling2D(2, 2, name='pool2')
         
-        self.conv3 = layers.Conv2D(32, 3, padding='same', activation='relu', name='conv3')
+        self.conv3 = layers.Conv2D(16, 3, padding='same', activation='relu', name='conv3')
         self.bn3 = layers.BatchNormalization(name='bn3')
         self.pool3 = layers.MaxPooling2D(2, 2, name='pool3')
         
-        self.conv4 = layers.Conv2D(64, 3, padding='same', activation='relu', name='conv4')
+        self.conv4 = layers.Conv2D(32, 3, padding='same', activation='relu', name='conv4')
         self.bn4 = layers.BatchNormalization(name='bn4')
         self.pool4 = layers.MaxPooling2D(2, 2, name='pool4')
         

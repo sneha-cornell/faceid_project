@@ -18,7 +18,7 @@ def single_face_loss(y_true, y_pred):
     center_pred_sigmoid = tf.sigmoid(center_pred)
     
     # MSE loss on center prediction
-    loss = tf.keras.losses.mean_squared_error(y_true, center_pred_sigmoid)
+    loss = tf.keras.losses.MeanSquaredError()(y_true, center_pred_sigmoid)
     
     return loss
 
